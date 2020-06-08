@@ -1,0 +1,19 @@
+@import '../../css/utils';
+
+.home {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	width: 90%;
+	justify-content: center;
+}
+
+.col {
+	flex: 1 0 21%; /* explanation below */
+	margin: 5px;
+}

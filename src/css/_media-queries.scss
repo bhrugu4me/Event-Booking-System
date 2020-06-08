@@ -1,0 +1,15 @@
+$mobile-breakpoint: 320px;
+$tablet-breakpoint: 768px;
+$medium-breakpoint: 900px;
+$desktop-breakpoint: 1025px;
+$wide-breakpoint: 1130px;
+
+$mq-breakpoints: (
+	mobile: $mobile-breakpoint,
+	tablet: $tablet-breakpoint,
+	medium: $medium-breakpoint,
+	desktop: $desktop-breakpoint,
+	wide: $wide-breakpoint,
+);
+
+@import 'sass-mq';

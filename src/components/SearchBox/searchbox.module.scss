@@ -1,0 +1,32 @@
+@import '../../css/utils';
+
+.searchBox {
+	-webkit-appearance: none;
+	border: none;
+	outline: none;
+	padding: 10px;
+	line-height: 30px;
+	margin-bottom: 30px;
+	border-radius: 4px;
+	border: 1px solid $gray;
+	width: 50%;
+	margin-top: 10px;
+}
+
+input[type='search']::-webkit-input-placeholder {
+	text-align: center;
+}
+
+input[type='search']:-moz-placeholder {
+	/* Firefox 18- */
+	text-align: center;
+}
+
+input[type='search']::-moz-placeholder {
+	/* Firefox 19+ */
+	text-align: center;
+}
+
+input[type='search']:-ms-input-placeholder {
+	text-align: center;
+}

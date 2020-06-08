@@ -1,0 +1,11 @@
+.a11y-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  outline: none;
+
+  &:disabled {
+    cursor: auto;
+  }
+}

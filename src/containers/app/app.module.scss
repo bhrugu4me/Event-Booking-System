@@ -1,0 +1,44 @@
+//@import url('https://fonts.googleapis.com/css?family=Prompt');
+
+@import '../../css/_utils';
+
+.app {
+	width: 100%;
+	background: $white;
+	scroll-behavior: auto;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	flex: 1;
+}
+
+.tripleColumn {
+	display: flex;
+	flex-direction: column;
+	flex: 9;
+}
+
+.doubleColumn {
+	display: flex;
+	flex-direction: column;
+	flex: 4;
+}
+
+.link {
+	color: #61dafb;
+}
+
+.leftsidebar {
+	background: $darkSlateGray;
+	min-width: 10%;
+	width: 10%;
+}
