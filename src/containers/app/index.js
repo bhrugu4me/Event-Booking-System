@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Error from '../../components/Error';
 import Router from '../../router';
-import style from './app.module.scss';
+import './app.module.scss';
 
 const mapStateToProps = null;
 
@@ -15,7 +15,7 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className={style.app}>
+			<div className='app'>
 				<Error>
 					<Router />
 				</Error>

@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import classnames from 'classnames';
-import styles from './button.module.scss';
+import './button.module.scss';
 
 export const TYPES = {
 	PRIMARY: 'btnprimary',
@@ -40,11 +40,7 @@ class BaseButton extends PureComponent<Props> {
 				type={type}
 				disabled={disabled}
 				onClick={onClick}
-				className={classnames(
-					styles.btn,
-					styles[buttonType],
-					styles[buttonSize || SIZES.MEDIUM]
-				)}
+				className={classnames('btn', buttonType, buttonSize)}
 			>
 				{text}
 			</button>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import style from './searchbox.module.scss';
+import './searchbox.module.scss';
 
 type Props = {
 	onSearchChange: Function,
@@ -8,7 +8,7 @@ type Props = {
 
 export const SearchBox = (props: Props) => (
 	<input
-		className={style.searchBox}
+		className='searchBox'
 		type='search'
 		name='search'
 		placeholder='SEARCH EVENTS'

@@ -416,8 +416,7 @@ module.exports = function(webpackEnv) {
 						// By default we support SASS Modules with the
 						// extensions .module.scss or .module.sass
 						{
-							test: sassRegex,
-							exclude: sassModuleRegex,
+							test: sassModuleRegex,
 							use: getStyleLoaders(
 								{
 									importLoaders: 2,

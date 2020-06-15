@@ -8,7 +8,7 @@ import { SearchBox } from '../../components/SearchBox';
 
 import { EventDetail } from '../../models/event';
 
-import style from './eventList.module.scss';
+import './eventList.module.scss';
 
 const mapStateToProps = (state) => {
 	return {
@@ -53,12 +53,12 @@ class EventList extends Component<Props, State> {
 		);
 
 		return (
-			<div className={style.home}>
+			<div className='home'>
 				<SearchBox onSearchChange={this.onSearchChange} />
 
-				<div className={style.row}>
+				<div className='row'>
 					{filteredEvents.map((event: EventDetail) => (
-						<div key={event.eventId} className={style.col}>
+						<div key={event.eventId} className='col'>
 							<Event eventDetail={event} />
 						</div>
 					))}

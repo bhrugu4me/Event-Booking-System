@@ -8,7 +8,7 @@ import { setCurrentBooking } from '../../actions/booking/bookingActions';
 
 import type { EventDetail } from '../../models/event';
 
-import style from './booking.module.scss';
+import './booking.module.scss';
 
 const mapStateToProps = (state) => {
 	return {
@@ -167,7 +167,7 @@ class Booking extends Component<Props, State> {
 							type='text'
 							name={name}
 							value={attendees[i - 2]}
-							className={style.booking_input}
+							className='booking_input'
 							onChange={this.handleChange}
 						/>
 						{attendees && attendees[i - 2] === '' && (
@@ -237,30 +237,30 @@ class Booking extends Component<Props, State> {
 		return (
 			<div>
 				{currentBooking && (
-					<div className={style.booking}>
+					<div className='booking'>
 						<h3>{currentBooking.eventName}</h3>
 						<span>
 							Number of Available Seats : {currentBooking.availableSeats}
 						</span>
 						{isSubmitted && (
-							<div className={style.booking_ticket}>Tickets Booked </div>
+							<div className='booking_ticket'>Tickets Booked </div>
 						)}
-						<div className={style.booking_guestInfo}>
-							<div className={style.booking_imgDiv}>
+						<div className='booking_guestInfo'>
+							<div className='booking_imgDiv'>
 								<img
 									src={currentBooking.imageUrl}
 									alt={currentBooking.eventId}
-									className={style.booking_img}
+									className='booking_img'
 								/>
 							</div>
-							<div className={style.booking_guestDetail}>
+							<div className='booking_guestDetail'>
 								<div>
 									Name:
 									<input
 										type='text'
 										name='name'
 										value={name}
-										className={style.booking_input}
+										className='booking_input'
 										required
 										onChange={this.handleChange}
 									/>
@@ -271,7 +271,7 @@ class Booking extends Component<Props, State> {
 									<input
 										type='email'
 										name='email'
-										className={style.booking_input}
+										className='booking_input'
 										value={email}
 										required
 										onChange={this.handleChange}
@@ -282,7 +282,7 @@ class Booking extends Component<Props, State> {
 									Phone No.:
 									<input
 										type='text'
-										className={style.booking_input}
+										className='booking_input'
 										name='phone'
 										value={phone}
 										onChange={this.handleChange}
@@ -292,7 +292,7 @@ class Booking extends Component<Props, State> {
 									Number of seats:
 									<select
 										name='seats'
-										className={style.booking_select}
+										className='booking_select'
 										defaultValue={seats}
 										required
 										onChange={this.handleChange}
@@ -328,7 +328,7 @@ class Booking extends Component<Props, State> {
 							</div>
 						</div>
 						{isSubmitted && (
-							<div className={style.booking_submit}>
+							<div className='booking_submit'>
 								<div>Your Name: {name}</div>
 								<div>Your Email Id: {email}</div>
 								<div>Your Phone Number: {phone}</div>

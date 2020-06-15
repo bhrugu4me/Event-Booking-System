@@ -8,7 +8,7 @@ import { setCurrentBooking } from '../../actions/booking/bookingActions';
 
 import type { EventDetail } from '../../models/event';
 
-import style from './event.module.scss';
+import './event.module.scss';
 
 const mapStateToProps = (state) => {
 	return {
@@ -42,16 +42,13 @@ class Event extends Component<Props> {
 		const { eventDetail } = this.props;
 
 		return (
-			<div className={style.event}>
-				<div className={style.event_title}>{eventDetail.eventName}</div>
-				<div className={style.event_detail}>
+			<div className='event'>
+				<div className='event_title'>{eventDetail.eventName}</div>
+				<div className='event_detail'>
 					<div>
-						<img
-							className={style.event_detail_image}
-							src={eventDetail.imageUrl}
-						/>
+						<img className='event_detail_image' src={eventDetail.imageUrl} />
 					</div>
-					<div className={style.event_detail_info}>
+					<div className='event_detail_info'>
 						<div>{eventDetail.eventDate}</div>
 						<div>Seats Available: {eventDetail.availableSeats}</div>
 						<div>
