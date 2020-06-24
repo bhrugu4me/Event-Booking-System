@@ -161,12 +161,12 @@ class Booking extends Component<Props, State> {
 			for (let i = 2; i <= seats; i++) {
 				const name = 'name_' + (i - 2);
 				const item = (
-					<div>
+					<div key={name}>
 						Name of attendee {i}#:
 						<input
 							type='text'
 							name={name}
-							value={attendees[i - 2]}
+							value={attendees[i - 2] || ''}
 							className='booking_input'
 							onChange={this.handleChange}
 						/>
@@ -186,7 +186,7 @@ class Booking extends Component<Props, State> {
 		const { attendees } = this.state;
 		for (let i = 0; i < attendees.length; i++) {
 			const item = (
-				<div>
+				<div key={i + 2}>
 					Name of attendee {i + 2}#:
 					{attendees[i]}
 				</div>
@@ -245,88 +245,90 @@ class Booking extends Component<Props, State> {
 						{isSubmitted && (
 							<div className='booking_ticket'>Tickets Booked </div>
 						)}
-						<div className='booking_guestInfo'>
-							<div className='booking_imgDiv'>
-								<img
-									src={currentBooking.imageUrl}
-									alt={currentBooking.eventId}
-									className='booking_img'
-								/>
+						{!isSubmitted && (
+							<div className='booking_guestInfo'>
+								<div className='booking_imgDiv'>
+									<img
+										src={currentBooking.imageUrl}
+										alt={currentBooking.eventId}
+										className='booking_img'
+									/>
+								</div>
+								<div className='booking_guestDetail'>
+									<div>
+										Name:
+										<input
+											type='text'
+											name='name'
+											value={name}
+											className='booking_input'
+											required
+											onChange={this.handleChange}
+										/>
+										{!isNameValid && <span> {nameValidateMessage} </span>}
+									</div>
+									<div>
+										Email:
+										<input
+											type='email'
+											name='email'
+											className='booking_input'
+											value={email}
+											required
+											onChange={this.handleChange}
+										/>
+										{!isEmailValid && <span> {emailValidateMessage} </span>}
+									</div>
+									<div>
+										Phone No.:
+										<input
+											type='text'
+											className='booking_input'
+											name='phone'
+											value={phone}
+											onChange={this.handleChange}
+										/>
+									</div>
+									<div>
+										Number of seats:
+										<select
+											name='seats'
+											className='booking_select'
+											defaultValue={seats}
+											required
+											onChange={this.handleChange}
+										>
+											<option value='0'>0</option>
+											<option value='1'>1</option>
+											<option value='2'>2</option>
+											<option value='3'>3</option>
+											<option value='4'>4</option>
+											<option value='5'>5</option>
+											<option value='6'>6</option>
+										</select>
+										{!isSeatsValid && <span> {seatsValidateMessage} </span>}
+									</div>
+									{seats > 1 &&
+										seats <= currentBooking.availableSeats &&
+										this.createAttendee()}
+									<div>
+										<Button.Primary
+											type='submit'
+											buttonSize={Button.SIZES.LARGE}
+											disabled={this.isSubmitDisabled()}
+											onClick={this.onSubmit}
+											text='Submit'
+										></Button.Primary>
+										<Button.Default
+											type='reset'
+											buttonSize={Button.SIZES.LARGE}
+											text='Cancel'
+											onClick={this.onCancel}
+										></Button.Default>
+									</div>
+								</div>
 							</div>
-							<div className='booking_guestDetail'>
-								<div>
-									Name:
-									<input
-										type='text'
-										name='name'
-										value={name}
-										className='booking_input'
-										required
-										onChange={this.handleChange}
-									/>
-									{!isNameValid && <span> {nameValidateMessage} </span>}
-								</div>
-								<div>
-									Email:
-									<input
-										type='email'
-										name='email'
-										className='booking_input'
-										value={email}
-										required
-										onChange={this.handleChange}
-									/>
-									{!isEmailValid && <span> {emailValidateMessage} </span>}
-								</div>
-								<div>
-									Phone No.:
-									<input
-										type='text'
-										className='booking_input'
-										name='phone'
-										value={phone}
-										onChange={this.handleChange}
-									/>
-								</div>
-								<div>
-									Number of seats:
-									<select
-										name='seats'
-										className='booking_select'
-										defaultValue={seats}
-										required
-										onChange={this.handleChange}
-									>
-										<option value='0'>0</option>
-										<option value='1'>1</option>
-										<option value='2'>2</option>
-										<option value='3'>3</option>
-										<option value='4'>4</option>
-										<option value='5'>5</option>
-										<option value='6'>6</option>
-									</select>
-									{!isSeatsValid && <span> {seatsValidateMessage} </span>}
-								</div>
-								{seats > 1 &&
-									seats <= currentBooking.availableSeats &&
-									this.createAttendee()}
-								<div>
-									<Button.Primary
-										type='submit'
-										buttonSize={Button.SIZES.LARGE}
-										disabled={this.isSubmitDisabled()}
-										onClick={this.onSubmit}
-										text='Submit'
-									></Button.Primary>
-									<Button.Default
-										type='reset'
-										buttonSize={Button.SIZES.LARGE}
-										text='Cancel'
-										onClick={this.onCancel}
-									></Button.Default>
-								</div>
-							</div>
-						</div>
+						)}
 						{isSubmitted && (
 							<div className='booking_submit'>
 								<div>Your Name: {name}</div>

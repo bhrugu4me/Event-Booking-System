@@ -1,7 +1,7 @@
 [
 	{
 		"eventId": 1,
-		"eventName": "Event 1",
+		"eventName": "React Introduction",
 		"imageUrl": "https://secure.gravatar.com/avatar/7063e4e3d83ca275f016542320d08abc?s=400&d=identicon&r=g",
 		"eventDate": "01/07/2020",
 		"availableSeats": 5,
@@ -10,7 +10,7 @@
 	},
 	{
 		"eventId": 2,
-		"eventName": "Event 2",
+		"eventName": "React Components",
 		"imageUrl": "https://secure.gravatar.com/avatar/7063e4e3d83ca275f016542320d08abc?s=400&d=identicon&r=g",
 		"eventDate": "02/07/2020",
 		"availableSeats": 0,
@@ -19,7 +19,7 @@
 	},
 	{
 		"eventId": 3,
-		"eventName": "Event 3",
+		"eventName": "Redux in React",
 		"imageUrl": "https://secure.gravatar.com/avatar/7063e4e3d83ca275f016542320d08abc?s=400&d=identicon&r=g",
 		"eventDate": "03/07/2020",
 		"availableSeats": 22,
@@ -28,7 +28,7 @@
 	},
 	{
 		"eventId": 4,
-		"eventName": "Event 4",
+		"eventName": "Styling in React",
 		"imageUrl": "https://secure.gravatar.com/avatar/7063e4e3d83ca275f016542320d08abc?s=400&d=identicon&r=g",
 		"eventDate": "04/07/2020",
 		"availableSeats": 10,
@@ -37,7 +37,7 @@
 	},
 	{
 		"eventId": 5,
-		"eventName": "Event 5",
+		"eventName": "Typescript with React",
 		"imageUrl": "https://secure.gravatar.com/avatar/7063e4e3d83ca275f016542320d08abc?s=400&d=identicon&r=g",
 		"eventDate": "05/07/2020",
 		"availableSeats": 0,
@@ -46,7 +46,7 @@
 	},
 	{
 		"eventId": 6,
-		"eventName": "Event 6",
+		"eventName": "Redux-Thunk with React",
 		"imageUrl": "https://secure.gravatar.com/avatar/7063e4e3d83ca275f016542320d08abc?s=400&d=identicon&r=g",
 		"eventDate": "06/07/2020",
 		"availableSeats": 20,
@@ -55,7 +55,7 @@
 	},
 	{
 		"eventId": 7,
-		"eventName": "Event 7",
+		"eventName": "React API Integration",
 		"imageUrl": "https://secure.gravatar.com/avatar/7063e4e3d83ca275f016542320d08abc?s=400&d=identicon&r=g",
 		"eventDate": "07/07/2020",
 		"availableSeats": 15,
@@ -64,7 +64,7 @@
 	},
 	{
 		"eventId": 8,
-		"eventName": "Event 8",
+		"eventName": "Error Handling with React",
 		"imageUrl": "https://secure.gravatar.com/avatar/7063e4e3d83ca275f016542320d08abc?s=400&d=identicon&r=g",
 		"eventDate": "08/07/2020",
 		"availableSeats": 14,

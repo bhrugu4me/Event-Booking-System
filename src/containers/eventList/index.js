@@ -62,6 +62,11 @@ class EventList extends Component<Props, State> {
 							<Event eventDetail={event} />
 						</div>
 					))}
+					{filteredEvents.length === 0 && (
+						<div key='nores' className='col'>
+							<h3> No Result Found </h3>
+						</div>
+					)}
 				</div>
 			</div>
 		);
