@@ -5,15 +5,15 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding: 1%;
 }
 .row {
 	display: flex;
 	flex-wrap: wrap;
-	width: 90%;
 	justify-content: center;
 }
 
 .col {
-	flex: 1 0 21%; /* explanation below */
+	flex: 1 0 21%;
 	margin: 5px;
 }

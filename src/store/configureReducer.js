@@ -3,14 +3,12 @@ import { createResponsiveStateReducer } from 'redux-responsive';
 import { connectRouter } from 'connected-react-router';
 import bookingReducer from '../reducers/booking/bookingReducer';
 import eventReducer from '../reducers/event/eventReducer';
-import guestReducer from '../reducers/guest/guestReducer';
 
 const configureReducer = (history) => {
 	return combineReducers({
 		router: connectRouter(history),
 		booking: bookingReducer,
 		event: eventReducer,
-		guest: guestReducer,
 		browser: createResponsiveStateReducer({
 			mobile: 320,
 			tablet: 768,
